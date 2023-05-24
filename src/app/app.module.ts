@@ -10,6 +10,7 @@ import {CursosService} from "./semestre/service/curso.service";
 import {CommonModule} from "@angular/common";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+import {CursosModule} from "./cursos/cursos.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
         BrowserModule,
         AutosModule,
         CommonModule,
+        CursosModule,
         HttpClientModule,
         AppRoutingModule
 

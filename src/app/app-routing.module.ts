@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {ListCursosComponent} from "./semestre/list-cursos/list-cursos.component";
+import {CreateCursoComponent} from "./cursos/create-curso/create-curso.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'cursos',
     component: ListCursosComponent
+  },
+  {
+    path: '',
+    component: CreateCursoComponent
   }
 ]
 

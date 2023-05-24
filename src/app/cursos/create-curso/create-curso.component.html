@@ -1,8 +1,8 @@
-<form [formGroup]="paisForm" (ngSubmit)="!paisForm.invalid && createPais(paisForm.value)">
+<form [formGroup]="cursoForm" (ngSubmit)="!cursoForm.invalid && createPais(cursoForm.value)">
   <div class="form-group">
-    <label for="nombre">Nombre del pais</label>
-    <input type="text" class="form-control" id="nombre" aria-describedby="paisHelp" placeholder="Ingrese el nombre del pais">
-    <small id="paisHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <label for="nombre">Nombre del curso</label>
+    <input type="text" class="form-control" id="nombre" aria-describedby="paisHelp" placeholder="Ingrese el nombre del curso">
+    <small id="paisHelp" class="form-text text-muted"></small>
   </div>
   <!-- <div class="form-group">
      <label for="exampleInputPassword1">Password</label>
