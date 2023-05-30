@@ -19,7 +19,7 @@ export class CreateCursoComponent implements OnInit {
 
   ngOnInit(): void {
     this.cursoForm = this.formBuilder.group({ // Creamos el formulario con los campos que queremos que tenga
-      nombre:["",[Validators.required, Validators.minLength(3)]] // El campo nombre es obligatorio y debe tener al menos 3 caracteres
+      nombre:["",[Validators.required, Validators.minLength(3)], Validators.maxLength(20), Validators.pattern("^[0-9]*$")] // El campo nombre es obligatorio y debe tener al menos 3 caracteres
     });
   }
 
