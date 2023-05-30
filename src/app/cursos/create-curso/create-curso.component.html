@@ -1,17 +1,25 @@
-<form [formGroup]="cursoForm" (ngSubmit)="!cursoForm.invalid && createPais(cursoForm.value)">
-  <div class="form-group">
-    <label for="nombre">Nombre del curso</label>
-    <input type="text" class="form-control" id="nombre" aria-describedby="paisHelp" placeholder="Ingrese el nombre del curso">
-    <small id="paisHelp" class="form-text text-muted"></small>
-  </div>
-  <!-- <div class="form-group">
-     <label for="exampleInputPassword1">Password</label>
-     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-   </div>
-   <div class="form-group form-check">
-     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-     <label class="form-check-label" for="exampleCheck1">Check me out</label>
-   </div>-->
-  <button type="submit" class="btn btn-primary">Submit</button>
+<!-- Estamos indicando que este formGroup (grupo de formulario) esta enlazado a programaForm -->
+<!-- El ngSubmit indica que ocurre si se da clic en submit: debe ocurrir si los datos de programaForm no son invalidos y ademas debe crear el programa -->
+<form [formGroup]="programaForm" (ngSubmit)="!programaForm.invalid && createPrograma(programaForm.value)">
 
+  <!-- Esta clase sirve para envolver el formulario para darle estilos -->
+  <div class="form-group">
+
+    <!-- El for="nombre" le dice al label que es una etiqueta del input con id="nombre" -->
+    <label for="nombre">Nombre del programa</label>
+
+    <!-- El formControlName le pone nombre a este input para que sea reconocido como un atributo de la clase Programa, debe tener el mismo nombre que tiene en la clase Programa -->
+    <!-- El for="nombre" le dice al label que es una etiqueta del input con id="nombre" -->
+    <!-- El atributo "aria-describedby" se asocia a un elemento para referenciar un elemento secundario que contiene la descripción o información adicional. -->
+    <input type="text" class="form-control" formControlName="nombre"  id="nombre" aria-describedby="programaHelp" placeholder="Ingrese el nombre del programa">
+
+    <!-- Este elemento tiene informacion del input. Esto permite que por ejemplo lectores de pantalla, proporcionen una descripción más completa del elemento.-->
+    <small id="programaHelp" class="form-text text-muted">Escriba el nombre del programa.</small>
+  </div>
+
+  <!-- el valid de programaForm se usa para indicar si los campos del formulario cumplen con la validacion, si no es asi deshabilita el boton -->
+  <button type="submit" class="btn btn-primary" [disabled]="!programaForm.valid" >  Crear  </button>
+
+  <!-- Si se presiona este boton se ejecuta el metodo cancelCreation -->
+  <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" > Cancelar </button>
 </form>

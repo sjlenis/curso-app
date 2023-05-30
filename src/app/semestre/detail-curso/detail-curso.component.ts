@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {Curso} from "../semestre/model/curso";
+import {Curso} from "../model/curso";
 
 @Component({
-  selector: 'app-detail-plan',
+  selector: 'app-detail-curso',
   templateUrl: './detail-curso.component.html',
   styleUrls: ['./detail-curso.component.css']
 })
