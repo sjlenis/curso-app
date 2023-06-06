@@ -10,7 +10,7 @@ const routes: Routes = [
     component: ListCursosComponent
   },
   {
-    path: '',
+    path: 'cursos/crear',
     component: CreateCursoComponent
   }
 ]

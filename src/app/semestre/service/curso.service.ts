@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class CursosService {
-  private baseUrl: string = "https://raw.githubusercontent.com/FabianAndres2023/Curso/master/cursos.json.txt";
+  private baseUrl: string = "http://localhost:8081/curso-service/cursos";
 
   constructor(private httpClient: HttpClient) { }
 
